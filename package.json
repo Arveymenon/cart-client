@@ -1,15 +1,24 @@
 {
-  "name": "@cart/npm",
-  "version": "1.0.0",
+  "name": "@arvey/cart",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "typescript": "^4.2.4",
+    "ts-node": "^9.1.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Arveymenon/cart-client.git"
-  }
+    "url": "git+https://github.com/Arveymenon/cart-client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arveymenon/cart-client/issues"
+  },
+  "homepage": "https://github.com/Arveymenon/cart-client#readme"
 }
