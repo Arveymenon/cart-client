@@ -27,4 +27,3 @@ export interface CartUpdateResponse{
     error: boolean
     response: string
 }
-

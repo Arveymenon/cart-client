@@ -1,24 +1,25 @@
 import { CartInterface, CartUpdateResponse, UserCart } from './interfaces';
-import { ProductAdd }  from './services/add'
+
 import { viewCart }  from './services/cart'
+
+import { ProductAdd }  from './services/add'
+import { ProductRemove }  from './services/remove'
 
 
 export class Cart implements CartInterface{
     isUpdated: boolean = false
     public productAdd = new ProductAdd
+    public productRemove = new ProductRemove
 
     constructor(){
     }
 
     add(productId: string, quantity?: number){
-      const a: CartUpdateResponse = {error: false, response: 'Updated'};
-      this.productAdd.add(productId, quantity)
-      return a
+      return this.productAdd.add(productId, quantity)
     }
     
     remove(productId: string, quantity?: number){
-      const a: CartUpdateResponse = {error: false, response: 'Updated'}; 
-      return a
+      return this.productRemove.remove(productId, quantity)
     }
     
     view(){

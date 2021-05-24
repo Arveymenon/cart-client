@@ -1,30 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cart = void 0;
-var add_1 = require("./services/add");
 var cart_1 = require("./services/cart");
+var add_1 = require("./services/add");
+var remove_1 = require("./services/remove");
 var Cart = /** @class */ (function () {
     function Cart() {
         this.isUpdated = false;
         this.productAdd = new add_1.ProductAdd;
-        this.add("123", 1);
-        this.add("123", 1);
-        this.add("123", 1);
-        this.add("123", 1);
-        console.log('view');
-        this.view();
+        this.productRemove = new remove_1.ProductRemove;
     }
     Cart.prototype.add = function (productId, quantity) {
-        var a = { error: false, response: 'Updated' };
-        this.productAdd.add(productId, quantity);
-        return a;
+        return this.productAdd.add(productId, quantity);
     };
     Cart.prototype.remove = function (productId, quantity) {
-        var a = { error: false, response: 'Updated' };
-        return a;
+        return this.productRemove.remove(productId, quantity);
     };
     Cart.prototype.view = function () {
-        console.log(cart_1.viewCart());
         return cart_1.viewCart();
     };
     Cart.prototype.find = function () {
